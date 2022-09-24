@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    <title>Log Out</title>
+{% endblock titulo %}
+
+{% block content %}
+    <div class="alert alert-danger" role="alert">
+        Has Cerrado Sesión!
+    </div>
+    <div>
+        <a class="btn btn-outline-dark btn-sm m-1" href="{% url 'fotos:galeria' %}">Inicio</a>
+    </div>
+{% endblock content %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    <title>Log In</title>
+{% endblock titulo %}
+
+{% block content %}
+
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-4">
+            <div class="card">
+                <div class="card-header bg-dark bg-gradient bg-opacity-50">
+                    <div class="card-title">
+                        Iniciar Sesión
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {% for campo in form %}
+                            <div class="form-group">
+                                {{campo.name}}
+                                <br>
+                                {{campo}}
+                            </div>
+                        {% endfor %}
+                        <br>
+                        <button class="btn btn-outline-dark" type="submit">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
